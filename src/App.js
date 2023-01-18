@@ -158,6 +158,12 @@ function App() {
           <div className="col border">col</div>
           <div className="col border">col</div>
         </div>
+
+        {/* fixed layout : using pixel sizes for a one-structure, screen-size-specific layout
+        fluid layout : using percent sizes for a one-structure fluid layout
+        responsive layout : using breakpoints to define multiple structures that adapt responsively to different sizes
+        (^^ for example defining different column sizes for sm, md, lg screen sizes)
+        responsive layouts enable an optimal layout at each screen size */}
       </div>
     </div>
   );
