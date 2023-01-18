@@ -307,6 +307,237 @@ function App() {
             <p>The quickbrownfox jumps over the lazy dog.</p>
           </div>
         </div>
+
+        {/* Bootstrap tables use regular html table tags with only table having class table
+        there are also table classes like table-primary, table-danger, table-dark that color
+        tables, table rows, or individual cells
+        "table table-striped" makes a striped table
+        "table table-bordered" draws a border around each data cell
+        "table table-hover" makes rows darker on hover */}
+        <table className="table">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>Email</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>John</td>
+              <td>Smith</td>
+              <td>johnsmith@example.com</td>
+            </tr>
+            <tr className="table-dark">
+              <td>2</td>
+              <td>John</td>
+              <td>Smith</td>
+              <td>johnsmith@example.com</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td className="table-primary">John</td>
+              <td className="table-info">Smith</td>
+              <td className="table-secondary">johnsmith@example.com</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td className="table-light">John</td>
+              <td className="table-success">Smith</td>
+              <td className="table-danger">null</td>
+            </tr>
+          </tbody>
+        </table>
+        <br />
+        <table className="table table-striped">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>Email</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>John</td>
+              <td>Smith</td>
+              <td>johnsmith@example.com</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>John</td>
+              <td>Smith</td>
+              <td>johnsmith@example.com</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>John</td>
+              <td>Smith</td>
+              <td>johnsmith@example.com</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>John</td>
+              <td>Smith</td>
+              <td>null</td>
+            </tr>
+          </tbody>
+        </table>
+        <br />
+        <table className="table table-bordered">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>Email</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>John</td>
+              <td>Smith</td>
+              <td>johnsmith@example.com</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>John</td>
+              <td>Smith</td>
+              <td>johnsmith@example.com</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>John</td>
+              <td>Smith</td>
+              <td>johnsmith@example.com</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>John</td>
+              <td>Smith</td>
+              <td>null</td>
+            </tr>
+          </tbody>
+        </table>
+        <table className="table table-hover">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>Email</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>John</td>
+              <td>Smith</td>
+              <td>johnsmith@example.com</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>John</td>
+              <td>Smith</td>
+              <td>johnsmith@example.com</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>John</td>
+              <td>Smith</td>
+              <td>johnsmith@example.com</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>John</td>
+              <td>Smith</td>
+              <td>null</td>
+            </tr>
+          </tbody>
+        </table>
+        <br />
+
+        {/* compact table made with "table table-sm"
+        can set dark to only thead with table-dark */}
+        <table className="table table-sm">
+          <thead className="table-dark">
+            <tr>
+              <th>#</th>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>Email</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>John</td>
+              <td>Smith</td>
+              <td>johnsmith@example.com</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>John</td>
+              <td>Smith</td>
+              <td>johnsmith@example.com</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>John</td>
+              <td>Smith</td>
+              <td>johnsmith@example.com</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>John</td>
+              <td>Smith</td>
+              <td>null</td>
+            </tr>
+          </tbody>
+        </table>
+
+        {/* unordered list without bullets */}
+        <ul className="list-unstyled">
+          <li>Home</li>
+          <li>
+            Products
+            <ul>
+              <li>Gadgets</li>
+              <li>Accessories</li>
+            </ul>
+          </li>
+          <li>About Us</li>
+          <li>Contact</li>
+        </ul>
+
+        {/* create a horizontal unordered list with ul.list-inline and
+        each li.list-inline-item */}
+        <ul className="list-inline">
+          <li className="list-inline-item">Home</li>
+          <li className="list-inline-item">Products</li>
+          <li className="list-inline-item">About</li>
+          <li className="list-inline-item">Support</li>
+        </ul>
+
+        {/* dl=description list, dt=description term, dd=description definition
+        To make a definition list, use standard html tags with the dl being a row
+        and each dt, dd pair being a col */}
+        <dl className="row">
+          <dt className="col-3">User Agent</dt>
+          <dd className="col-9">
+            An HTML user agent is any device that interprets HTML documents.
+          </dd>
+          <dt className="col-3 text-truncate">Client-side Scripting</dt>
+          <dd className="col-9">
+            Client-side scripting generally refers to the category of computer
+            programs on the web that are executed by the user's web browser.
+          </dd>
+        </dl>
       </div>
     </div>
   );
