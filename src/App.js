@@ -1,4 +1,5 @@
 import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap-icons/font/bootstrap-icons.css";
 
 // import individual components rather than the entire library
 // to reduce the amount of code that gets sent to the client
@@ -538,6 +539,395 @@ function App() {
             programs on the web that are executed by the user's web browser.
           </dd>
         </dl>
+
+        {/* list groups are unordered lists with the class list-group and whose items
+        have the class list-group-item; set the width to 50% with w-50
+        set active and disabled */}
+        <ul className="list-group w-50">
+          <li className="list-group-item active">list-group-item active</li>
+          <li className="list-group-item">list-group-item</li>
+          <li className="list-group-item">list-group-item</li>
+          <li className="list-group-item disabled">list-group-item disabled</li>
+          <li className="list-group-item disabled">list-group-item disabled</li>
+        </ul>
+        <br />
+
+        {/* create a list-group without outer borders and rounded corners that is
+        flush with its parent container with list-group list-group-flush */}
+        <ul className="list-group list-group-flush w-50">
+          <li className="list-group-item">list-group-item</li>
+          <li className="list-group-item">list-group-item</li>
+          <li className="list-group-item">list-group-item</li>
+          <li className="list-group-item">list-group-item</li>
+        </ul>
+        <br />
+
+        {/* can use list-group with checkboxes and radios children of div must be labels
+        with class list-group-item which house the input tag */}
+        <div className="list-group w-50">
+          <label className="list-group-item">
+            <input type="checkbox" className="form-check-input me-1" />
+            form-check-input
+          </label>
+          <label className="list-group-item">
+            <input type="checkbox" className="form-check-input me-1" />
+            form-check-input
+          </label>
+          <label className="list-group-item">
+            <input type="checkbox" className="form-check-input me-1" />
+            form-check-input
+          </label>
+        </div>
+        <br />
+
+        {/* can use list-group with radio buttons too (remember children must be 
+          list-group-item); also, note that list-group does not have to be a list
+          but can be a div, and list-group-item doesn't have to be a li either */}
+        <div className="list-group w-50">
+          <label className="list-group-item">
+            <input
+              type="radio"
+              className="form-check-input me-1"
+              name="gender"
+            />
+            Male
+          </label>
+          <label className="list-group-item">
+            <input
+              type="radio"
+              className="form-check-input me-1"
+              name="gender"
+            />
+            Female
+          </label>
+        </div>
+        <br />
+
+        {/* can use list-group to create a sidebar menu where list-group-items
+        are links with class "list-group-item list-group-item-action" 
+        containing i tags with Bootstrap icons and the name
+
+        Added bootstrap icons with npm i bootstrap-icons
+        and setting classname within an i tag */}
+        <div className="list-group w-50">
+          <a href="" className="list-group-item list-group-item-action active">
+            <i className="bi-house-fill"></i> Home
+          </a>
+          <a href="" className="list-group-item list-group-item-action">
+            <i className="bi-camera-fill"></i> Pictures
+            <span className="badge rounded-pill bg-primary float-end">145</span>
+          </a>
+          <a href="" className="list-group-item list-group-item-action">
+            <i className="bi-music-note-beamed"></i> Music
+            <span className="badge rounded-pill bg-primary float-end">50</span>
+          </a>
+          <a href="" className="list-group-item list-group-item-action">
+            <i className="bi-film"></i> Videos
+            <span className="badge rounded-pill bg-primary float-end">50</span>
+          </a>
+        </div>
+        <br />
+        {/* can also add nearly any HTML within the list group, for example to
+        create a list of article briefs  */}
+
+        {/* list-group-item also has contextual classes for custom coloring
+        list-group-item-action darkens list-group-item on hover */}
+        <div className="list-group">
+          <li className="list-group-item list-group-item-primary list-group-item-action">
+            list-group-item-primary
+          </li>
+          <li className="list-group-item list-group-item-warning list-group-item-action">
+            list-group-item-warning
+          </li>
+          <li className="list-group-item list-group-item-danger list-group-item-action">
+            list-group-item-danger
+          </li>
+        </div>
+        <br />
+
+        {/* three types of forms in Bootstrap: vertical, horizontal, inline
+
+        all textual form controls, including input and textarea require the
+        class form-control
+
+        select requires the class form-select
+
+        vertical form */}
+        <form action="">
+          <div className="mb-3">
+            <label className="form-label">Email</label>
+            <input type="text" className="form-control" placeholder="Email" />
+          </div>
+          <div className="mb-3">
+            <label htmlFor="" className="form-label">
+              Password
+            </label>
+            <input
+              type="password"
+              className="form-control"
+              placeholder="Password"
+            />
+          </div>
+          <div className="mb-3">
+            <div className="form-check">
+              <input type="checkbox" className="form-check-input" />
+              <label htmlFor="" className="form-check-label">
+                Remember me
+              </label>
+            </div>
+          </div>
+          <button className="btn btn-primary">Sign in</button>
+        </form>
+        <br />
+
+        {/* horizontal form
+        create a row for each label-input row
+        must set each label class to "col col-form label" for proper formatting
+        also remember that rows must have columns as descendents */}
+        <form action="">
+          <div className="row mb-3">
+            <label htmlFor="" className="col-2 col-form-label">
+              Email
+            </label>
+            <div className="col-10">
+              <input
+                type="email"
+                className="form-control"
+                placeholder="Email"
+              />
+            </div>
+          </div>
+          <div className="row mb-3">
+            <label htmlFor="" className="col-2 col-form-label">
+              Password
+            </label>
+            <div className="col-10">
+              <input
+                type="password"
+                className="form-control"
+                placeholder="Password"
+              />
+            </div>
+          </div>
+          <div className="row mb-3">
+            <div className="col-10 offset-2">
+              <div className="form-check">
+                <input type="checkbox" className="form-check-input" />
+                <label htmlFor="" className="form-check-label">
+                  Remember me
+                </label>
+              </div>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-10 offset-2">
+              <button className="btn btn-primary">Sign in</button>
+            </div>
+          </div>
+        </form>
+        <br />
+
+        {/* inline form */}
+        <form action="">
+          <div className="row align-items-center g-3">
+            <div className="col-auto">
+              <input
+                type="email"
+                className="form-control"
+                placeholder="Email"
+              />
+            </div>
+            <div className="col-auto">
+              <input
+                type="password"
+                className="form-control"
+                placeholder="Password"
+              />
+            </div>
+            <div className="col-auto">
+              <div className="form-check">
+                <input type="checkbox" className="form-check-input" />
+                <label htmlFor="" className="form-check-label">
+                  Remember me
+                </label>
+              </div>
+            </div>
+            <div className="col-auto">
+              <button className="btn btn-primary">Sign in</button>
+            </div>
+          </div>
+        </form>
+        <br />
+        {/* NOTE: it is recommended to include a label for form inputs
+        so screen readers have no trouble with form
+        if desired, can hide form labels with visually-hidden class
+        
+        Also, can make responsive form layouts, for example an inline
+        form that becomes a vertical form on smaller viewports */}
+
+        {/* can preset form values with input.form-control-plaintext instead
+        of input.form-control and adding attribute readonly */}
+        <form action="">
+          <div className="row mb-3">
+            <label htmlFor="" className="col-2 col-form-label">
+              Email
+            </label>
+            <div className="col-10">
+              <input
+                type="email"
+                className="form-control-plaintext"
+                readOnly
+                value="computerInsertedEmail@example.com"
+              />
+            </div>
+          </div>
+          <div className="row mb-3">
+            <label htmlFor="" className="col-2 col-form-label">
+              Password
+            </label>
+            <div className="col-10">
+              <input
+                type="password"
+                className="form-control"
+                placeholder="Password"
+              />
+            </div>
+          </div>
+          <div className="row mb-3">
+            <div className="col-10 offset-2">
+              <div className="form-check">
+                <input type="checkbox" className="form-check-input" />
+                <label htmlFor="" className="form-check-label">
+                  Remember me
+                </label>
+              </div>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-10 offset-2">
+              <button className="btn btn-primary">Sign in</button>
+            </div>
+          </div>
+        </form>
+        <br />
+
+        {/* can size form controls with column-sizing */}
+        <form action="">
+          <div className="row">
+            <div className="col-6">
+              <input type="text" className="form-control" placeholder="City" />
+            </div>
+            <div className="col-3">
+              <select name="" id="" className="form-select">
+                <option value="">State</option>
+              </select>
+            </div>
+            <div className="col-3">
+              <input type="text" className="form-control" placeholder="Zip" />
+            </div>
+          </div>
+        </form>
+        <br />
+
+        {/* to make an inline form of radio buttons, create div.row,
+        div.col-12, and then div.form-check.form-check-inline for each
+        checkbox with children being the input and label */}
+        <div className="row">
+          <div className="col-12">
+            <div className="form-check form-check-inline">
+              <input type="checkbox" className="form-check-input" />
+              <label htmlFor="" className="form-check-label">
+                Music
+              </label>
+            </div>
+            <div className="form-check form-check-inline">
+              <input type="checkbox" className="form-check-input" />
+              <label htmlFor="" className="form-check-label">
+                Travel
+              </label>
+            </div>
+            <div className="form-check form-check-inline">
+              <input type="checkbox" className="form-check-input" />
+              <label htmlFor="" className="form-check-label">
+                Reading
+              </label>
+            </div>
+          </div>
+        </div>
+        <br />
+
+        {/* add help text to form controls with div.form-text */}
+        <label htmlFor="" className="form-label">
+          Password
+        </label>
+        <input type="password" className="form-control" />
+        <div className="form-text">
+          Must be 8-20 characters long, contain letters, numbers and special
+          characters, but must not contain spaces.
+        </div>
+        <br />
+
+        {/* add disabled attributes to form-controls (input, textarea, select)
+        and Bootstrap will style them to reflect their disabled status
+        
+        to disable all controls within a form, place them in a fieldset
+        element and apply the attribute disabled to the fieldset element
+        
+        can add readonly attribute to form-controls to prevent modification; 
+        read-only inputs are styled similar to disabled but retain the standard
+        text cursor
+        ^^ disabled form-controls cannot be highlighted, the text cannot be
+        selected, while readonly form-controls can be selected (though not
+        modified) */}
+
+        {/* can set height of form-controls with col-form-label-lg
+        or col-form-label-sm
+        
+        when using lg or sm form-controls, also apply col-form-label-{size}
+        to legend elements to correctly resize them */}
+        <div className="row mb-3">
+          <label htmlFor="" className="col-2 col-form-label col-form-label-lg">
+            Email
+          </label>
+          <div className="col-10">
+            <input
+              type="text"
+              className="form-control form-control-lg"
+              placeholder="Email"
+            />
+          </div>
+        </div>
+        <div className="row mb-3">
+          <label htmlFor="" className="col-2 col-form-label">
+            Email
+          </label>
+          <div className="col-10">
+            <input type="text" className="form-control" placeholder="Email" />
+          </div>
+        </div>
+        <div className="row">
+          <label htmlFor="" className="col-2 col-form-label col-form-label-sm">
+            Email
+          </label>
+          <div className="col-10">
+            <input
+              type="text"
+              className="form-control form-control-sm"
+              placeholder="Email"
+            />
+          </div>
+        </div>
+        <br />
+        {/* can also create a lg or sm form-select in the same way */}
+
+        {/* form validation with Bootstrap uses the browser's native form 
+        validation API, styling with :invalid and :valid pseudo-classes
+        
+        when doing form-validation, check out Bootstrap documentation on
+        this; I'm not going to copy this over now */}
+
+        {/* bootstrap also supports new HTML5 inputs types including: 
+        datetime, number, email, url, search, range, color, url, etc. */}
       </div>
     </div>
   );
