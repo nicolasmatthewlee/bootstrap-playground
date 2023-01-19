@@ -1,6 +1,12 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
+// required for dropdown to work
+import "@popperjs/core";
+import "bootstrap";
+
+import Dropdown from "react-bootstrap/Dropdown";
+
 import IMG from "./assets/example.jpg";
 
 function App() {
@@ -1208,11 +1214,9 @@ function App() {
             <img src={IMG} alt="example" className="img-fluid img-thumbnail" />
           </div>
         </div>
-
         {/* img-fluid auto scales image width max-width 100%
         and height auto */}
         <img src={IMG} alt="example" className="img-fluid mb-3" />
-
         {/* can also style videos to be responsive */}
         {/* can align images in a container with text-center, text-end classes */}
         <div className="row border mb-1">
@@ -1230,7 +1234,6 @@ function App() {
             <img src={IMG} alt="example" className="img-fluid col-2" />
           </div>
         </div>
-
         {/* can also align images horizonally with float classes in image directly */}
         <div className="row border mb-1">
           <div className="col">
@@ -1242,18 +1245,15 @@ function App() {
             <img src={IMG} alt="" className="img-fluid col-2 float-start" />
           </div>
         </div>
-
         {/* can center-align with auto margin in image directly */}
         <div className="row border mb-3">
           <div className="col">
             <img src={IMG} alt="" className="img-fluid col-2 d-block mx-auto" />
           </div>
         </div>
-
         {/* Bootstrap cards are flexible and extensible containers with options
         for headers, footers, contextual background colors, and additional
         display options */}
-
         {/* cards do not have a fixed width, so they will occupy the full width
         of its parent element; a fixed-width card must explicitly specify width
         or be contained within a fixed-width parent; card has no margin by default
@@ -1296,7 +1296,6 @@ function App() {
             </div>
           </div>
         </div>
-
         {/* example of card-header and card-footer
          card-footer uses text-muted to lighten text */}
         <div className="card text-center mb-3">
@@ -1312,7 +1311,6 @@ function App() {
           </div>
           <div className="card-footer text-muted">3 years ago</div>
         </div>
-
         {/* example of group-list in a card
         ul must use class list-group-flush */}
         <div className="card mb-3">
@@ -1331,7 +1329,6 @@ function App() {
             </a>
           </div>
         </div>
-
         {/* the additional styling provided by setting card-title, etc. 
         as opposed to not defining any class ensures that the card is 
         styled nicely; may be small differences but do improve styling */}
@@ -1362,9 +1359,7 @@ function App() {
             </div>
           </div>
         </div>
-
         {/* can also add Bootstrap nav components to the card header */}
-
         {/* coloring cards with text-{COLOR} and bg-{OPTION} */}
         <div className="row gy-4 mb-3">
           <div className="col-6">
@@ -1412,7 +1407,6 @@ function App() {
             </div>
           </div>
         </div>
-
         {/* card groups render cards as single, attached elements with equal
         width and height columns; cards inside a card group become
         horizontally stacked on extra small devices */}
@@ -1457,13 +1451,10 @@ function App() {
             </div>
           </div>
         </div>
-
         {/* can also layout cards with Bootstrap rows and cols, setting 
         the number of cols for each screen size */}
-
         {/* can create horizontal cards by putting a row and col inside 
         of a card */}
-
         {/* set image into a card background with card-img-overlay
         NOTE: the card content must not be larger than the height of
         the image, or it will be displayed outside the image */}
@@ -1478,11 +1469,9 @@ function App() {
             <button className="btn btn-primary">View Profile</button>
           </div>
         </div>
-
         {/* can make a link in the entire card expand to the full card (so that
         the entire card is clickable and will direct to the link by
         specifying "stretched-link" class in the link tag) */}
-
         {/* Bootstrap icons example */}
         <div className="row mb-3">
           <div className="col-auto">
@@ -1496,9 +1485,218 @@ function App() {
             </button>
           </div>
         </div>
+        {/* Bootstrap nav
+        NOTE: disabled attribute makes the link look disabled by
+        changing the color and removing the hover effect, but the
+        link remains clickable unless the href attribute is removed */}
+        <nav className="nav">
+          <a href="" className="nav-item nav-link">
+            Home
+          </a>
+          <a href="" className="nav-item nav-link">
+            Profile
+          </a>
+          <a href="" className="nav-item nav-link">
+            Messages
+          </a>
+          <a className="nav-item nav-link disabled">Reports</a>
+        </nav>
+        {/* align nav items with justify-content-center, justify-content-end */}
+        <nav className="nav justify-content-center">
+          <a href="" className="nav-item nav-link">
+            Home
+          </a>
+          <a href="" className="nav-item nav-link">
+            Profile
+          </a>
+          <a href="" className="nav-item nav-link">
+            Messages
+          </a>
+          <a className="nav-item nav-link disabled">Reports</a>
+        </nav>
+        <nav className="nav justify-content-end">
+          <a href="" className="nav-item nav-link">
+            Home
+          </a>
+          <a href="" className="nav-item nav-link">
+            Profile
+          </a>
+          <a href="" className="nav-item nav-link">
+            Messages
+          </a>
+          <a className="nav-item nav-link disabled">Reports</a>
+        </nav>
+
+        {/* can make vertically-stacked navigation with flex-column class
+        added to nav  */}
+        {/* tabbed navigation with "nav nav-tabs" */}
+        <nav className="nav nav-tabs mb-3">
+          <a href="" className="nav-item nav-link active">
+            Home
+          </a>
+          <a href="" className="nav-item nav-link">
+            Profile
+          </a>
+          <a href="" className="nav-item nav-link">
+            Messages
+          </a>
+          <a className="nav-item nav-link disabled">Reports</a>
+        </nav>
+
+        {/* add icons to navigation bar */}
+        <nav className="nav nav-tabs mb-3">
+          <a href="" className="nav-item nav-link active">
+            <i className="bi-house-door"></i> Home
+          </a>
+          <a href="" className="nav-item nav-link">
+            <i className="bi-person"></i> Profile
+          </a>
+          <a href="" className="nav-item nav-link">
+            <i className="bi-envelope"></i> Messages
+          </a>
+          <a className="nav-item nav-link disabled">
+            <i className="bi-bar-chart"></i> Reports
+          </a>
+        </nav>
+
+        {/* pills navigation */}
+        <nav className="nav nav-pills mb-3">
+          <a href="" className="nav-item nav-link active">
+            <i className="bi-house-door"></i> Home
+          </a>
+          <a href="" className="nav-item nav-link">
+            <i className="bi-person"></i> Profile
+          </a>
+          <a href="" className="nav-item nav-link">
+            <i className="bi-envelope"></i> Messages
+          </a>
+          <a className="nav-item nav-link disabled">
+            <i className="bi-bar-chart"></i> Reports
+          </a>
+        </nav>
+
+        {/* vertical pills navigation */}
+        <nav className="nav nav-pills mb-3 flex-column">
+          <a href="" className="nav-item nav-link active">
+            <i className="bi-house-door"></i> Home
+          </a>
+          <a href="" className="nav-item nav-link">
+            <i className="bi-person"></i> Profile
+          </a>
+          <a href="" className="nav-item nav-link">
+            <i className="bi-envelope"></i> Messages
+          </a>
+          <a className="nav-item nav-link disabled">
+            <i className="bi-bar-chart"></i> Reports
+          </a>
+        </nav>
+
+        {/* Bootstrap dropdown menus (not working...
+        try react-bootstrap dropdown components) */}
+        <Dropdown className="mb-3">
+          <Dropdown.Toggle>Messages</Dropdown.Toggle>
+          <Dropdown.Menu>
+            <Dropdown.Item>Inbox</Dropdown.Item>
+            <Dropdown.Item>Sent</Dropdown.Item>
+            <Dropdown.Item>Drafts</Dropdown.Item>
+          </Dropdown.Menu>
+        </Dropdown>
+
+        {/* expand nav-items to proportionally (based on item size) 
+        fill all space with nav-fill */}
+        <nav className="nav nav-pills nav-fill mb-3">
+          <a href="#bottom" className="nav-item nav-link active">
+            <i className="bi-house-door"></i> Home
+          </a>
+          <a href="#bottom" className="nav-item nav-link">
+            <i className="bi-person"></i> Profile
+          </a>
+          <a href="#bottom" className="nav-item nav-link">
+            <i className="bi-envelope"></i> Messages
+          </a>
+          <a className="nav-item nav-link disabled">
+            <i className="bi-bar-chart"></i> Reports
+          </a>
+        </nav>
+
+        {/* use nav-justified for nav items to fill all space
+        and each have the same width */}
+        <nav className="nav nav-pills nav-justified mb-3">
+          <a href="#bottom" className="nav-item nav-link active">
+            <i className="bi-house-door"></i> Home
+          </a>
+          <a href="#bottom" className="nav-item nav-link">
+            <i className="bi-person"></i> Profile
+          </a>
+          <a href="#bottom" className="nav-item nav-link">
+            <i className="bi-envelope"></i> Messages
+          </a>
+          <a className="nav-item nav-link disabled">
+            <i className="bi-bar-chart"></i> Reports
+          </a>
+        </nav>
+
+        {/* Bootstrap navigation bar will auto collapse on devices
+        with small viewports with expansion when users click the
+        toggle button; will be horizontal on medium and large
+        devices like laptops or desktop
+        
+        nav.navbar
+        a.navbar-brand
+        button.navbar-toggler>i.navbar-toggler-icon
+        */}
+
+        <nav className="navbar navbar-expand-md navbar-dark bg-dark">
+          <div className="container-fluid">
+            <a href="#bottom" className="navbar-brand">
+              Brand
+            </a>
+            <button
+              type="button"
+              className="navbar-toggler"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarCollapse"
+            >
+              <i className="navbar-toggler-icon"></i>
+            </button>
+            <div className="collapse navbar-collapse" id="navbarCollapse">
+              <div className="navbar-nav">
+                <a href="#bottom" className="nav-item nav-link">
+                  Home
+                </a>
+                <a href="#bottom" className="nav-item nav-link">
+                  Profile
+                </a>
+                <a href="#bottom" className="nav-item nav-link">
+                  Messages
+                </a>
+                <a href="#bottom" className="nav-item nav-link">
+                  Reports
+                </a>
+              </div>
+              <div className="navbar-nav ms-auto">
+                <a href="#bottom" className="nav-item nav-link">
+                  Login
+                </a>
+              </div>
+            </div>
+          </div>
+        </nav>
+
+        {/* can add logo images, dropdowns, search form of navbar
+        can set color of navbar
+        can fix navbar to top or bottom .fixed-top .fixed-bottom
+        can set sticky navbar with .sticky-top */}
+
+        {/* NOTE: must add at least 70px padding to top or bottom when
+        using fixed-top or fixed-bottom navbar
+        
+        ALSO, place navbar in a .container, .container-fluid for
+        proper padding and alignment with the rest of the content */}
 
         <br />
       </div>
+      <div id="bottom"></div>
     </div>
   );
 }
