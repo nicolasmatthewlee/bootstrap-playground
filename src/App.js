@@ -189,7 +189,6 @@ function App() {
         <p>paragraph in Bootstrap</p>
         <p className="lead">paragraph lead in Bootstrap</p>
         <br />
-
         {/* align text to left, center, right with text-start, text-center, text-end
         can also set align for different screen sizes (text-sm-center
         text-md-right) */}
@@ -197,7 +196,6 @@ function App() {
         <p className="text-center">text-center</p>
         <p className="text-end">text-end</p>
         <br />
-
         {/* can format text using standard html tags
 
         b-bold
@@ -243,7 +241,6 @@ function App() {
           <del>del</del>
         </p>
         <br />
-
         {/* can format uppercase, lowercase, capitalize with text-uppercase, text-lowercase, text-capitalize */}
         <p className="text-lowercase">
           text-lowercase: The quick brown fox jumps over the lazy dog.
@@ -255,7 +252,6 @@ function App() {
           text-capitalize: The quick brown fox jumps over the lazy dog.
         </p>
         <br />
-
         {/* utility classes can be used to set font-color */}
         <p className="text-primary">text-primary</p>
         <p className="text-secondary">text-secondary</p>
@@ -264,12 +260,10 @@ function App() {
         <p className="text-warning">text-warning</p>
         <p className="text-danger">text-danger</p>
         <p className="text-muted">text-muted</p>
-
         {/* blockquotes in Bootstrap - looks like a larger version of p */}
         <blockquote className="blockquote">
           <p>paragraph in blockquote with class blockquote</p>
         </blockquote>
-
         {/* for a properly attributed blockquote, put the blockquote 
         (with class blockquote) in a figure tag and use a figcaption 
         with class blockquote-footer that includes the author within
@@ -282,14 +276,12 @@ function App() {
             figcaption.blockquote-footer by <cite>cite html tag</cite>
           </figcaption>
         </figure>
-
         {/* truncate text with an ellipsis with text-truncate */}
         <div className="row">
           <div className="col-2 text-truncate">
             The quick brown fox jumps over the lazy dog.
           </div>
         </div>
-
         {/* text-wrap wraps text
         text-nowrap prevents text wrapping */}
         <div className="row">
@@ -298,7 +290,6 @@ function App() {
           </div>
         </div>
         <br />
-
         {/* use text-break to prevent a long word from breaking the layout */}
         <div className="row">
           <div className="col-1 border">
@@ -308,7 +299,6 @@ function App() {
             <p>The quickbrownfox jumps over the lazy dog.</p>
           </div>
         </div>
-
         {/* Bootstrap tables use regular html table tags with only table having class table
         there are also table classes like table-primary, table-danger, table-dark that color
         tables, table rows, or individual cells
@@ -462,7 +452,6 @@ function App() {
           </tbody>
         </table>
         <br />
-
         {/* compact table made with "table table-sm"
         can set dark to only thead with table-dark */}
         <table className="table table-sm">
@@ -501,7 +490,6 @@ function App() {
             </tr>
           </tbody>
         </table>
-
         {/* unordered list without bullets */}
         <ul className="list-unstyled">
           <li>Home</li>
@@ -515,7 +503,6 @@ function App() {
           <li>About Us</li>
           <li>Contact</li>
         </ul>
-
         {/* create a horizontal unordered list with ul.list-inline and
         each li.list-inline-item */}
         <ul className="list-inline">
@@ -524,7 +511,6 @@ function App() {
           <li className="list-inline-item">About</li>
           <li className="list-inline-item">Support</li>
         </ul>
-
         {/* dl=description list, dt=description term, dd=description definition
         To make a definition list, use standard html tags with the dl being a row
         and each dt, dd pair being a col */}
@@ -539,7 +525,6 @@ function App() {
             programs on the web that are executed by the user's web browser.
           </dd>
         </dl>
-
         {/* list groups are unordered lists with the class list-group and whose items
         have the class list-group-item; set the width to 50% with w-50
         set active and disabled */}
@@ -551,7 +536,6 @@ function App() {
           <li className="list-group-item disabled">list-group-item disabled</li>
         </ul>
         <br />
-
         {/* create a list-group without outer borders and rounded corners that is
         flush with its parent container with list-group list-group-flush */}
         <ul className="list-group list-group-flush w-50">
@@ -561,7 +545,6 @@ function App() {
           <li className="list-group-item">list-group-item</li>
         </ul>
         <br />
-
         {/* can use list-group with checkboxes and radios children of div must be labels
         with class list-group-item which house the input tag */}
         <div className="list-group w-50">
@@ -579,7 +562,6 @@ function App() {
           </label>
         </div>
         <br />
-
         {/* can use list-group with radio buttons too (remember children must be 
           list-group-item); also, note that list-group does not have to be a list
           but can be a div, and list-group-item doesn't have to be a li either */}
@@ -602,7 +584,6 @@ function App() {
           </label>
         </div>
         <br />
-
         {/* can use list-group to create a sidebar menu where list-group-items
         are links with class "list-group-item list-group-item-action" 
         containing i tags with Bootstrap icons and the name
@@ -629,7 +610,6 @@ function App() {
         <br />
         {/* can also add nearly any HTML within the list group, for example to
         create a list of article briefs  */}
-
         {/* list-group-item also has contextual classes for custom coloring
         list-group-item-action darkens list-group-item on hover */}
         <div className="list-group">
@@ -644,7 +624,6 @@ function App() {
           </li>
         </div>
         <br />
-
         {/* three types of forms in Bootstrap: vertical, horizontal, inline
 
         all textual form controls, including input and textarea require the
@@ -679,7 +658,6 @@ function App() {
           <button className="btn btn-primary">Sign in</button>
         </form>
         <br />
-
         {/* horizontal form
         create a row for each label-input row
         must set each label class to "col col-form label" for proper formatting
@@ -726,7 +704,6 @@ function App() {
           </div>
         </form>
         <br />
-
         {/* inline form */}
         <form action="">
           <div className="row align-items-center g-3">
@@ -764,7 +741,6 @@ function App() {
         
         Also, can make responsive form layouts, for example an inline
         form that becomes a vertical form on smaller viewports */}
-
         {/* can preset form values with input.form-control-plaintext instead
         of input.form-control and adding attribute readonly */}
         <form action="">
@@ -810,7 +786,6 @@ function App() {
           </div>
         </form>
         <br />
-
         {/* can size form controls with column-sizing */}
         <form action="">
           <div className="row">
@@ -828,7 +803,6 @@ function App() {
           </div>
         </form>
         <br />
-
         {/* to make an inline form of radio buttons, create div.row,
         div.col-12, and then div.form-check.form-check-inline for each
         checkbox with children being the input and label */}
@@ -855,7 +829,6 @@ function App() {
           </div>
         </div>
         <br />
-
         {/* add help text to form controls with div.form-text */}
         <label htmlFor="" className="form-label">
           Password
@@ -866,7 +839,6 @@ function App() {
           characters, but must not contain spaces.
         </div>
         <br />
-
         {/* add disabled attributes to form-controls (input, textarea, select)
         and Bootstrap will style them to reflect their disabled status
         
@@ -879,7 +851,6 @@ function App() {
         ^^ disabled form-controls cannot be highlighted, the text cannot be
         selected, while readonly form-controls can be selected (though not
         modified) */}
-
         {/* can set height of form-controls with col-form-label-lg
         or col-form-label-sm
         
@@ -919,15 +890,32 @@ function App() {
         </div>
         <br />
         {/* can also create a lg or sm form-select in the same way */}
-
         {/* form validation with Bootstrap uses the browser's native form 
         validation API, styling with :invalid and :valid pseudo-classes
         
         when doing form-validation, check out Bootstrap documentation on
         this; I'm not going to copy this over now */}
-
         {/* bootstrap also supports new HTML5 inputs types including: 
         datetime, number, email, url, search, range, color, url, etc. */}
+        {/* can also disable checkboxes and radios with disabled attribute;
+        Bootstrap will automatically style them to appear disabled */}
+        {/* create a toggle switch (custom checkbox) with "form-check form-switch"
+        as the class for the parent div that contains the checkbox input
+        and label
+        Can set to be pre-checked with checked attribute */}
+        <div className="form-check form-switch">
+          <input type="checkbox" className="form-check-input" />
+          <label htmlFor="" className="form-check-label">
+            Default switch checkbox
+          </label>
+        </div>
+        <br />
+
+        {/* create a range-slider with input type="range" and input class 
+        form-range; specify min, max, and step with attributes */}
+        <label htmlFor="">Custom range</label>
+        <input type="range" className="form-range" min="0" max="8" step="2" />
+        <br />
       </div>
     </div>
   );
