@@ -1646,7 +1646,7 @@ function App() {
         button.navbar-toggler>i.navbar-toggler-icon
         */}
 
-        <nav className="navbar navbar-expand-md navbar-dark bg-dark">
+        <nav className="navbar navbar-expand-md navbar-dark bg-dark mb-3">
           <div className="container-fluid">
             <a href="#bottom" className="navbar-brand">
               Brand
@@ -1694,7 +1694,157 @@ function App() {
         ALSO, place navbar in a .container, .container-fluid for
         proper padding and alignment with the rest of the content */}
 
-        <br />
+        {/* accordion is a series of panels stacked on top of each other
+        accordion menus and widgets manage a large amount of content
+        in a small area */}
+        <div className="accordion mb-3" id="myAccordion">
+          <div className="accordion-item">
+            <h2 className="accordion-header">
+              <button
+                className="accordion-button collapsed"
+                data-bs-target="#collapseOne"
+                data-bs-toggle="collapse"
+              >
+                1. What is HTML?
+              </button>
+            </h2>
+            <div
+              className="accordion-collapse collapse"
+              id="collapseOne"
+              data-bs-parent="#myAccordion"
+            >
+              <div className="accordion-body">
+                <p>
+                  HTML stands for HyperText Markup Language. HTML is the
+                  standard markup language for describing the structure of web
+                  pages.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="accordion-item">
+            <h2 className="accordion-header">
+              <button
+                className="accordion-button collapsed"
+                data-bs-target="#collapseTwo"
+                data-bs-toggle="collapse"
+              >
+                2. What is Bootstrap?
+              </button>
+            </h2>
+            <div
+              className="accordion-collapse collapse"
+              id="collapseTwo"
+              data-bs-parent="#myAccordion"
+            >
+              <div className="accordion-body">
+                <p>
+                  Bootstrap is a sleek, intuitive, and powerful front-end
+                  framework for faster and easier web development. It is a
+                  collection of CSS and HTML conventions.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* can customize icons to be plus and minus instead of arrow
+        can allow panels to stay open independent of other panels by
+        omitting the data-bs-parent attribute in each .accordion-collapse
+        element */}
+
+        {/* breadcumbs navigation (for complex navigational hierarchies) */}
+        <nav>
+          <ol className="breadcrumb">
+            <li className="breadcrumb-item">
+              <a href="#bottom">Home</a>
+            </li>
+            <li className="breadcrumb-item">
+              <a href="#bottom">Products</a>
+            </li>
+            <li className="breadcrumb-item">
+              <a href="#bottom">Accessories</a>
+            </li>
+          </ol>
+        </nav>
+
+        {/* Badges indicate some valuable information on the web,
+        including headings, warnings, notification counts
+        
+        Bootstrap badges scale automatically to match the size of
+        the immediate parent element */}
+        <h1>
+          Bootstrap heading <span className="badge bg-primary">New</span>
+        </h1>
+        <h2>
+          Bootstrap heading <span className="badge bg-secondary">New</span>
+        </h2>
+        <h3>
+          Bootstrap heading <span className="badge bg-warning">New</span>
+        </h3>
+        <h4>
+          Bootstrap heading <span className="badge bg-danger">New</span>
+        </h4>
+        <h5>
+          Bootstrap heading <span className="badge bg-dark">New</span>
+        </h5>
+        <h6>
+          Bootstrap heading{" "}
+          <span className="badge bg-light text-dark">New</span>
+        </h6>
+
+        {/* pill badges are created with .rounded-pill */}
+        <div className="row mb-3 gx-0">
+          <div className="col">
+            <span className="badge rounded-pill bg-primary">Primary</span>
+          </div>
+          <div className="col">
+            <span className="badge rounded-pill bg-secondary">Primary</span>
+          </div>
+          <div className="col">
+            <span className="badge rounded-pill bg-warning">Primary</span>
+          </div>
+          <div className="col">
+            <span className="badge rounded-pill bg-danger">Primary</span>
+          </div>
+          <div className="col">
+            <span className="badge rounded-pill bg-dark">Primary</span>
+          </div>
+          <div className="col">
+            <span className="badge rounded-pill bg-light text-dark">
+              Primary
+            </span>
+          </div>
+          <div className="col">
+            <span className="badge rounded-pill bg-info">Primary</span>
+          </div>
+          <div className="col">
+            <span className="badge rounded-pill bg-success">Primary</span>
+          </div>
+        </div>
+
+        {/* badge counter in navigation */}
+        <nav className="nav nav-pills mb-3">
+          <a href="#bottom" className="nav-link">
+            Home
+          </a>
+          <a href="#bottom" className="nav-link">
+            Profile
+          </a>
+          <a href="#bottom" className="nav-link">
+            Messages <span className="badge bg-primary">34</span>
+          </a>
+          <a href="#bottom" className="nav-link">
+            Notification <span className="badge bg-primary">5</span>
+          </a>
+        </nav>
+
+        {/* positioned badges */}
+        <button type="button" class="btn btn-primary position-relative mb-3">
+          Inbox
+          <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+            50+
+          </span>
+        </button>
       </div>
       <div id="bottom"></div>
     </div>
