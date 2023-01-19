@@ -5,6 +5,8 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 // to reduce the amount of code that gets sent to the client
 import Button from "react-bootstrap/Button";
 
+import IMG from "./assets/example.jpg";
+
 function App() {
   return (
     <div className="App">
@@ -910,13 +912,11 @@ function App() {
           </label>
         </div>
         <br />
-
         {/* create a range-slider with input type="range" and input class 
         form-range; specify min, max, and step with attributes */}
         <label htmlFor="">Custom range</label>
         <input type="range" className="form-range" min="0" max="8" step="2" />
         <br />
-
         {/* input groups are created with a parent.input-group which acts as the
         container for inputs and addons
 
@@ -973,14 +973,12 @@ function App() {
           </div>
         </div>
         <br />
-
         {/* Bootstrap file input */}
         <div className="input-group">
           <input type="file" className="form-control" />
           <button className="btn btn-secondary">Upload</button>
         </div>
         <br />
-
         {/* place multiple inputs in an input-group
         or multiple addons in an input group */}
         <div className="input-group mb-3">
@@ -998,7 +996,6 @@ function App() {
           <input type="text" className="form-control" />
         </div>
         <br />
-
         {/* add button to input-group (no need to specify input-group-text),
         just add the button inside the input-group parent */}
         <div className="input-group">
@@ -1008,7 +1005,6 @@ function App() {
           </button>
         </div>
         <br />
-
         {/* size input groups with input-group-lg, input-group-sm */}
         <div className="input-group input-group-lg mb-2">
           <span className="input-group-text">Large</span>
@@ -1023,7 +1019,6 @@ function App() {
           <input className="form-control" type="text" />
         </div>
         <br />
-
         <div className="row gy-3 mb-3">
           <div className="col-auto">
             <button className="btn btn-primary">Primary</button>
@@ -1047,7 +1042,6 @@ function App() {
             <button className="btn btn-link">Link</button>
           </div>
         </div>
-
         <div className="row gy-3 mb-3">
           <div className="col-auto">
             <button className="btn btn-outline-primary">Primary</button>
@@ -1068,7 +1062,6 @@ function App() {
             <button className="btn btn-outline-danger">Danger</button>
           </div>
         </div>
-
         <div className="row gx-3 align-items-center mb-3">
           <div className="col-auto">
             <button className="btn btn-primary btn-lg">Large</button>
@@ -1082,9 +1075,8 @@ function App() {
         </div>
         {/* can also create disabled buttons with attribute disabled, which 
         Bootstrap automatically styles */}
-
         {/* indicate loading state of application with a disabled button and spinner */}
-        <div className="row">
+        <div className="row mb-3">
           <div className="col-auto">
             <button className="btn btn-primary" disabled>
               <span className="spinner-border spinner-border-sm"></span>
@@ -1100,6 +1092,165 @@ function App() {
             <button className="btn btn-primary" disabled>
               <span className="spinner-grow spinner-grow-sm"></span> Loading...
             </button>
+          </div>
+        </div>
+        {/* create a button group with parent btn-group */}
+        <div className="row-">
+          <div className="col-12">
+            <div className="btn-group mb-3">
+              <button className="btn btn-primary">Home</button>
+              <button className="btn btn-primary active">About</button>
+              <button className="btn btn-primary">Services</button>
+            </div>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-12">
+            <div className="btn-group mb-3">
+              <button className="btn btn-outline-primary">Home</button>
+              <button className="btn btn-outline-primary active">About</button>
+              <button className="btn btn-outline-primary">Services</button>
+            </div>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-12">
+            <div className="btn-group mb-3">
+              <button className="btn btn-success">
+                <i className="bi-eye"></i> View
+              </button>
+              <button className="btn btn-warning">
+                <i className="bi-pencil"></i> Edit
+              </button>
+              <button className="btn btn-danger">
+                <i className="bi-trash"></i> Delete
+              </button>
+            </div>
+          </div>
+        </div>
+        {/* create a toolbar of button groups with
+        parent btn-toolbar and children btn-groups (with child buttons) */}
+        <div className="btn-toolbar mb-3">
+          <div className="btn-group me-2">
+            <button className="btn btn-primary">
+              <i className="bi-fonts"></i>
+            </button>
+            <button className="btn btn-primary">
+              <i className="bi-type-bold"></i>
+            </button>
+            <button className="btn btn-primary">
+              <i className="bi-type-italic"></i>
+            </button>
+            <button className="btn btn-primary">
+              <i className="bi-type-underline"></i>
+            </button>
+          </div>
+          <div className="btn-group me-2">
+            <button className="btn btn-primary">
+              <i className="bi-text-left"></i>
+            </button>
+            <button className="btn btn-primary">
+              <i className="bi-text-center"></i>
+            </button>
+            <button className="btn btn-primary">
+              <i className="bi-text-right"></i>
+            </button>
+            <button className="btn btn-primary">
+              <i className="bi-text-justify"></i>
+            </button>
+          </div>
+          <div className="btn-group">
+            <button className="btn btn-primary">
+              <i className="bi-code"></i>
+            </button>
+          </div>
+        </div>
+        {/* large, default, small button groups */}
+        <div className="row">
+          <div className="col-12">
+            <div className="btn-group btn-group-lg mb-1">
+              <button className="btn btn-primary">Home</button>
+              <button className="btn btn-primary">About</button>
+              <button className="btn btn-primary">Services</button>
+            </div>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-12">
+            <div className="btn-group mb-1">
+              <button className="btn btn-primary">Home</button>
+              <button className="btn btn-primary">About</button>
+              <button className="btn btn-primary">Services</button>
+            </div>
+          </div>
+        </div>
+        <div className="row mb-3">
+          <div className="col-12">
+            <div className="btn-group btn-group-sm">
+              <button className="btn btn-primary">Home</button>
+              <button className="btn btn-primary">About</button>
+              <button className="btn btn-primary">Services</button>
+            </div>
+          </div>
+        </div>
+        {/* create a button group that flexes to available width with utility
+        class d-flex applied to the btn-group */}
+        <div className="btn-group d-flex mb-3">
+          <button className="btn btn-primary">Home</button>
+          <button className="btn btn-primary">About</button>
+          <button className="btn btn-primary">Services</button>
+        </div>
+        {/* rounded, rounded-circle, img-thumbnail styles for images */}
+        <div className="row mb-3">
+          <div className="col-4">
+            <img src={IMG} alt="example" className="img-fluid rounded" />
+          </div>
+          <div className="col-4">
+            <img src={IMG} alt="example" className="img-fluid rounded-circle" />
+          </div>
+          <div className="col-4">
+            <img src={IMG} alt="example" className="img-fluid img-thumbnail" />
+          </div>
+        </div>
+
+        {/* img-fluid auto scales image width max-width 100%
+        and height auto */}
+        <img src={IMG} alt="example" className="img-fluid mb-3" />
+
+        {/* can also style videos to be responsive */}
+        {/* can align images in a container with text-center, text-end classes */}
+        <div className="row border mb-1">
+          <div className="col">
+            <img src={IMG} alt="example" className="img-fluid col-2" />
+          </div>
+        </div>
+        <div className="row border mb-1">
+          <div className="col text-center">
+            <img src={IMG} alt="example" className="img-fluid col-2" />
+          </div>
+        </div>
+        <div className="row border mb-3">
+          <div className="col text-end">
+            <img src={IMG} alt="example" className="img-fluid col-2" />
+          </div>
+        </div>
+
+        {/* can also align images horizonally with float classes in image directly */}
+        <div className="row border mb-1">
+          <div className="col">
+            <img src={IMG} alt="" className="img-fluid col-2 float-end" />
+          </div>
+        </div>
+        <div className="row border mb-3">
+          <div className="col">
+            <img src={IMG} alt="" className="img-fluid col-2 float-start" />
+          </div>
+        </div>
+
+        {/* can center-align with auto margin in image directly */}
+        <div className="row border mb-1">
+          <div className="col">
+            <img src={IMG} alt="" className="img-fluid col-2 d-block mx-auto" />
           </div>
         </div>
 
