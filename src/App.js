@@ -916,6 +916,194 @@ function App() {
         <label htmlFor="">Custom range</label>
         <input type="range" className="form-range" min="0" max="8" step="2" />
         <br />
+
+        {/* input groups are created with a parent.input-group which acts as the
+        container for inputs and addons
+
+        input groups allow you to extend form controls to add text, icons, 
+        and buttons before, after, or on both sides of the input
+
+        when using text, both the input and the input-group-text
+        are under the parent input-group; when using an icon, only the
+        icon falls under the input-group, and the input appears outside
+        
+        the span html tag is an inline container used to mark up part of a text or a document */}
+        <div className="row g-3">
+          <div className="col-6">
+            <div className="input-group">
+              <span className="input-group-text">
+                <span className="bi-person"></span>
+              </span>
+              <input
+                type="text"
+                className="form-control"
+                placeholder="Username"
+              />
+            </div>
+          </div>
+          <div className="col-6">
+            <div className="input-group">
+              <input
+                type="text"
+                className="form-control"
+                placeholder="Amount"
+              />
+              <span className="input-group-text">.00</span>
+            </div>
+          </div>
+          <div className="col-6">
+            <div className="input-group">
+              <span className="input-group-text">https://www.</span>
+              <input
+                type="text"
+                className="form-control"
+                placeholder="Domain name"
+              />
+            </div>
+          </div>
+          <div className="col-6">
+            <div className="input-group">
+              <span className="input-group-text">$</span>
+              <input
+                type="text"
+                className="form-control"
+                placeholder="US Dollar"
+              />
+            </div>
+          </div>
+        </div>
+        <br />
+
+        {/* Bootstrap file input */}
+        <div className="input-group">
+          <input type="file" className="form-control" />
+          <button className="btn btn-secondary">Upload</button>
+        </div>
+        <br />
+
+        {/* place multiple inputs in an input-group
+        or multiple addons in an input group */}
+        <div className="input-group mb-3">
+          <span className="input-group-text">Name</span>
+          <input
+            type="text"
+            className="form-control"
+            placeholder="First name"
+          />
+          <input type="text" className="form-control" placeholder="Last name" />
+        </div>
+        <div className="input-group">
+          <span className="input-group-text">$</span>
+          <span className="input-group-text">0.00</span>
+          <input type="text" className="form-control" />
+        </div>
+        <br />
+
+        {/* add button to input-group (no need to specify input-group-text),
+        just add the button inside the input-group parent */}
+        <div className="input-group">
+          <input type="text" className="form-control" placeholder="Search..." />
+          <button className="btn btn-primary">
+            <i className="bi-search"></i>
+          </button>
+        </div>
+        <br />
+
+        {/* size input groups with input-group-lg, input-group-sm */}
+        <div className="input-group input-group-lg mb-2">
+          <span className="input-group-text">Large</span>
+          <input className="form-control" type="text" />
+        </div>
+        <div className="input-group mb-2">
+          <span className="input-group-text">Default</span>
+          <input className="form-control" type="text" />
+        </div>
+        <div className="input-group input-group-sm mb-2">
+          <span className="input-group-text">Small</span>
+          <input className="form-control" type="text" />
+        </div>
+        <br />
+
+        <div className="row gy-3 mb-3">
+          <div className="col-auto">
+            <button className="btn btn-primary">Primary</button>
+          </div>
+          <div className="col-auto">
+            <button className="btn btn-secondary">Secondary</button>
+          </div>
+          <div className="col-auto">
+            <button className="btn btn-warning">Warning</button>
+          </div>
+          <div className="col-auto">
+            <button className="btn btn-success">Success</button>
+          </div>
+          <div className="col-auto">
+            <button className="btn btn-dark">Dark</button>
+          </div>
+          <div className="col-auto">
+            <button className="btn btn-danger">Danger</button>
+          </div>
+          <div className="col-auto">
+            <button className="btn btn-link">Link</button>
+          </div>
+        </div>
+
+        <div className="row gy-3 mb-3">
+          <div className="col-auto">
+            <button className="btn btn-outline-primary">Primary</button>
+          </div>
+          <div className="col-auto">
+            <button className="btn btn-outline-secondary">Secondary</button>
+          </div>
+          <div className="col-auto">
+            <button className="btn btn-outline-warning">Warning</button>
+          </div>
+          <div className="col-auto">
+            <button className="btn btn-outline-success">Success</button>
+          </div>
+          <div className="col-auto">
+            <button className="btn btn-outline-dark">Dark</button>
+          </div>
+          <div className="col-auto">
+            <button className="btn btn-outline-danger">Danger</button>
+          </div>
+        </div>
+
+        <div className="row gx-3 align-items-center mb-3">
+          <div className="col-auto">
+            <button className="btn btn-primary btn-lg">Large</button>
+          </div>
+          <div className="col-auto">
+            <button className="btn btn-primary col-auto">Default</button>
+          </div>
+          <div className="col-auto">
+            <button className="btn btn-primary btn-sm col-auto">Small</button>
+          </div>
+        </div>
+        {/* can also create disabled buttons with attribute disabled, which 
+        Bootstrap automatically styles */}
+
+        {/* indicate loading state of application with a disabled button and spinner */}
+        <div className="row">
+          <div className="col-auto">
+            <button className="btn btn-primary" disabled>
+              <span className="spinner-border spinner-border-sm"></span>
+            </button>
+          </div>
+          <div className="col-auto">
+            <button className="btn btn-primary" disabled>
+              <span className="spinner-border spinner-border-sm"></span>{" "}
+              Loading...
+            </button>
+          </div>
+          <div className="col-auto">
+            <button className="btn btn-primary" disabled>
+              <span className="spinner-grow spinner-grow-sm"></span> Loading...
+            </button>
+          </div>
+        </div>
+
+        <br />
       </div>
     </div>
   );
