@@ -1,10 +1,6 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
-// import individual components rather than the entire library
-// to reduce the amount of code that gets sent to the client
-import Button from "react-bootstrap/Button";
-
 import IMG from "./assets/example.jpg";
 
 function App() {
@@ -1248,9 +1244,256 @@ function App() {
         </div>
 
         {/* can center-align with auto margin in image directly */}
-        <div className="row border mb-1">
+        <div className="row border mb-3">
           <div className="col">
             <img src={IMG} alt="" className="img-fluid col-2 d-block mx-auto" />
+          </div>
+        </div>
+
+        {/* Bootstrap cards are flexible and extensible containers with options
+        for headers, footers, contextual background colors, and additional
+        display options */}
+
+        {/* cards do not have a fixed width, so they will occupy the full width
+        of its parent element; a fixed-width card must explicitly specify width
+        or be contained within a fixed-width parent; card has no margin by default
+        
+        card-header
+        card-img-top
+        card-body : padded box within card
+          card-title
+          card-subtitle
+          card-text
+          card-link
+        card-footer
+        
+         */}
+        <div className="row mb-3">
+          <div className="col-6">
+            <div className="card">
+              <img src={IMG} alt="example" className="card-img-top" />
+              <div className="card-body text-center">
+                <h5 className="card-title">John Smith</h5>
+                <p>
+                  John is a web developer based in Los Angeles. He is
+                  specialized in HTML5, CSS3, JavaScript, and Bootstrap.
+                </p>
+                <button className="btn btn-primary">View Profile</button>
+              </div>
+            </div>
+          </div>
+          <div className="col-6">
+            <div className="card">
+              <img src={IMG} alt="example" className="card-img-top" />
+              <div className="card-body text-center">
+                <h5 className="card-title">John Smith</h5>
+                <p>
+                  John is a web developer based in Los Angeles. He is
+                  specialized in HTML5, CSS3, JavaScript, and Bootstrap.
+                </p>
+                <button className="btn btn-primary">View Profile</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* example of card-header and card-footer
+         card-footer uses text-muted to lighten text */}
+        <div className="card text-center mb-3">
+          <div className="card-header">Featured</div>
+          <div className="card-body ">
+            <h5 className="card-title">NASA Launched Solar Probe</h5>
+            <p className="card-text">
+              NASA launched Parker space probe in 2018 with the mission of
+              making observations of the outer corona of the Sun. It is the
+              first-ever mission to "touch" the Sun.
+            </p>
+            <button className="btn btn-primary">Learn more</button>
+          </div>
+          <div className="card-footer text-muted">3 years ago</div>
+        </div>
+
+        {/* example of group-list in a card
+        ul must use class list-group-flush */}
+        <div className="card mb-3">
+          <div className="card-header">Expenses</div>
+          <ul className="list-group list-group-flush">
+            <li className="list-group-item">Groceries</li>
+            <li className="list-group-item">Utilities</li>
+            <li className="list-group-item">Misc.</li>
+          </ul>
+          <div className="card-body">
+            <a href="" className="card-link">
+              Add More
+            </a>
+            <a href="" className="card-link">
+              Share
+            </a>
+          </div>
+        </div>
+
+        {/* the additional styling provided by setting card-title, etc. 
+        as opposed to not defining any class ensures that the card is 
+        styled nicely; may be small differences but do improve styling */}
+        <div className="row mb-3">
+          <div className="col-8">
+            <div className="card">
+              <img src={IMG} alt="example" className="card-img-top" />
+              <div className="card-body">
+                <h5 className="card-title">Card title</h5>
+                <p className="card-text">
+                  Here is some example text to make up the card's content.
+                  Replace it with your own text anytime.
+                </p>
+              </div>
+              <ul className="list-group list-group-flush">
+                <li className="list-group-item">Item one</li>
+                <li className="list-group-item">Item two</li>
+                <li className="list-group-item">Item three</li>
+              </ul>
+              <div className="card-body">
+                <a href="" className="card-link">
+                  Card link
+                </a>
+                <a href="" className="card-link">
+                  Card link two
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* can also add Bootstrap nav components to the card header */}
+
+        {/* coloring cards with text-{COLOR} and bg-{OPTION} */}
+        <div className="row gy-4 mb-3">
+          <div className="col-6">
+            <div className="card bg-primary text-white">
+              <div className="card-body">
+                <h5 className="card-title">Card title</h5>
+                <p className="card-text">
+                  Some example text to fill the card's content. This can be
+                  replaced anytime.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="col-6">
+            <div className="card bg-dark text-white">
+              <div className="card-body">
+                <h5 className="card-title">Card title</h5>
+                <p className="card-text">
+                  Some example text to fill the card's content. This can be
+                  replaced anytime.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="col-6">
+            <div className="card bg-warning text-white">
+              <div className="card-body">
+                <h5 className="card-title">Card title</h5>
+                <p className="card-text">
+                  Some example text to fill the card's content. This can be
+                  replaced anytime.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="col-6">
+            <div className="card bg-danger text-white">
+              <div className="card-body">
+                <h5 className="card-title">Card title</h5>
+                <p className="card-text">
+                  Some example text to fill the card's content. This can be
+                  replaced anytime.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* card groups render cards as single, attached elements with equal
+        width and height columns; cards inside a card group become
+        horizontally stacked on extra small devices */}
+        <div className="card-group mb-3">
+          <div className="card">
+            <img src={IMG} alt="example" className="card-img-top" />
+            <div className="card-body">
+              <h5 className="card-title">Card title</h5>
+              <p className="card-text">
+                Some example text to fill the card's content. This can be
+                replaced anytime.
+              </p>
+            </div>
+            <div className="card-footer text-muted">
+              Last updated 5 mins ago
+            </div>
+          </div>
+          <div className="card">
+            <img src={IMG} alt="example" className="card-img-top" />
+            <div className="card-body">
+              <h5 className="card-title">Card title</h5>
+              <p className="card-text">
+                Some example text to fill the card's content. This can be
+                replaced anytime.
+              </p>
+            </div>
+            <div className="card-footer text-muted">
+              Last updated 5 mins ago
+            </div>
+          </div>
+          <div className="card">
+            <img src={IMG} alt="example" className="card-img-top" />
+            <div className="card-body">
+              <h5 className="card-title">Card title</h5>
+              <p className="card-text">
+                Some example text to fill the card's content. This can be
+                replaced anytime.
+              </p>
+            </div>
+            <div className="card-footer text-muted">
+              Last updated 5 mins ago
+            </div>
+          </div>
+        </div>
+
+        {/* can also layout cards with Bootstrap rows and cols, setting 
+        the number of cols for each screen size */}
+
+        {/* can create horizontal cards by putting a row and col inside 
+        of a card */}
+
+        {/* set image into a card background with card-img-overlay
+        NOTE: the card content must not be larger than the height of
+        the image, or it will be displayed outside the image */}
+        <div className="card mb-3">
+          <img src={IMG} alt="example" className="card-img-top" />
+          <div className="card-img-overlay">
+            <h5 className="card-title">John Smith</h5>
+            <p>
+              John is a web developer based in Los Angeles. He is specialized in
+              HTML5, CSS3, JavaScript, and Bootstrap.
+            </p>
+            <button className="btn btn-primary">View Profile</button>
+          </div>
+        </div>
+
+        {/* can make a link in the entire card expand to the full card (so that
+        the entire card is clickable and will direct to the link by
+        specifying "stretched-link" class in the link tag) */}
+
+        {/* Bootstrap icons example */}
+        <div className="row mb-3">
+          <div className="col-auto">
+            <button className="btn btn-primary">
+              <i className="bi-search"></i> Search
+            </button>
+          </div>
+          <div className="col-auto">
+            <button className="btn btn-dark">
+              <i className="bi-search"></i> Search
+            </button>
           </div>
         </div>
 
